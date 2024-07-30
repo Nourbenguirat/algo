@@ -1,0 +1,31 @@
+ALGORITHM algorithm_name
+VAR
+   ch:STRING 
+   c:CHAR
+   l,nv,ns:INTEGER
+
+BEGIN
+ns=0
+l=1
+
+Read (c)
+    WHILE (c!=".") DO
+        ch+=c
+        Read (c)
+        l++
+        IF (c in ["a","o","u","i","e","A","E","U","O","I"] ) THEN
+            nv++
+        END_IF
+        IF (c==" ") or c=="." THEN
+            ns++
+        END_IF
+
+    END_WHILE
+    ch+="."
+    l=l-ns
+
+END
+
+
+
+
